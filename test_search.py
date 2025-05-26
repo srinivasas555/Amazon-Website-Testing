@@ -12,24 +12,24 @@ def test_amazon_search():
     try:
         driver.get("https://www.amazon.in")
 
-        # Wait for the search box
-        search_box = WebDriverWait(driver, 15).until(
+        # Type "headphones" in the search box
+        search_box = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.ID, "twotabsearchtextbox"))
         )
         search_box.send_keys("headphones")
 
-        # Click search button
-        search_button = WebDriverWait(driver, 15).until(
+        # Click the search button
+        search_button = WebDriverWait(driver, 10).until(
             EC.element_to_be_clickable((By.ID, "nav-search-submit-button"))
         )
         search_button.click()
 
-        # Wait for product results
+        # Wait until search results appear
         WebDriverWait(driver, 15).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, "div.s-main-slot"))
+            EC.presence_of_element_located((By.CSS_SELECTOR, "span.a-color-state"))
         )
 
-        # Validate title
+        print("Page title is:", driver.title)  # for debugging
         assert "headphones" in driver.title.lower()
 
     finally:
