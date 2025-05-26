@@ -1,2 +1,4 @@
+# run_tests.py
 import pytest
-pytest.main(['tests/'])
+
+pytest.main(["-v", "test_search.py"])
