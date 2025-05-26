@@ -13,3 +13,6 @@ This is a Selenium-based automation testing project that verifies the search fun
 ---
 
 ## 📁 Project Structure
+## 🖼️ Test Run Screenshot
+![Search Test Result](screenshots/search_test_result.png)
+
