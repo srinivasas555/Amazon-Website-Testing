@@ -1,4 +1,4 @@
-# Amazon-Website-Testing 🧪
+# Amazon Search Automation with Selenium🧪
 ![Test Workflow](https://github.com/srinivasas555/Amazon-Website-Testing/actions/workflows/python-app.yml/badge.svg)
 
 This is a Selenium-based automation testing project that verifies the search functionality of the Amazon website using Python and PyTest.
