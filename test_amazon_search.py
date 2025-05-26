@@ -14,7 +14,8 @@ def test_amazon_search():
     driver = webdriver.Chrome(service=service, options=options)
     driver.get("https://www.amazon.in")
 
-    try:
-        # Check if CAPTCHA is present
-        if "Enter the characters you see below" in driver.page_source:
-            print("❌ CAPTCHA detected. Test aborted.")
+   try:
+    # your Selenium test logic here
+    print("❌ CAPTCHA detected. Test aborted.")
+except Exception as e:
+    print(f"An error occurred: {e}")
