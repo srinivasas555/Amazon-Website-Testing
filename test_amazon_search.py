@@ -16,6 +16,7 @@ def test_amazon_search():
 
    try:
     # your Selenium test logic here
+    try:
     print("❌ CAPTCHA detected. Test aborted.")
 except Exception as e:
-    print(f"An error occurred: {e}")
+    print(f"Error: {e}")
